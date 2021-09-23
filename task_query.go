@@ -18,6 +18,7 @@ type Query struct {
 type Format struct {
 	Output          string      `json:"output"`
 	SeparateAudio   int         `json:"separate_audio"`
+	VideoCodec      string      `json:"video_codec,omitempty"`
 	SegmentDuration int         `json:"segment_duration"`
 	Destination     Destination `json:"destination"`
 	Stream          []Stream    `json:"stream"`
