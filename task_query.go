@@ -19,6 +19,7 @@ type Format struct {
 	Output          string      `json:"output"`
 	SeparateAudio   int         `json:"separate_audio"`
 	VideoCodec      string      `json:"video_codec,omitempty"`
+	AudioBitrate    string      `json:"audio_bitrate,omitempty"`
 	SegmentDuration int         `json:"segment_duration"`
 	Destination     Destination `json:"destination"`
 	Stream          []Stream    `json:"stream"`
