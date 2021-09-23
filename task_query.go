@@ -37,6 +37,7 @@ type Stream struct {
 	Height          int    `json:"height"`
 	AudioBitrate    int    `json:"audio_bitrate"`
 	OptimizeBitrate int    `json:"optimize_bitrate"`
+	ChunkListName   string `json:"chunklist_name,omitempty"`
 }
 
 const (
