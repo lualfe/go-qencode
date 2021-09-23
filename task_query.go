@@ -50,3 +50,10 @@ const (
 	//SeparateAudioEnabled enables the audio separation.
 	SeparateAudioEnabled
 )
+
+const (
+	//OptimizeBitRateDisabled disables the bitrate optmization.
+	OptimizeBitRateDisabled = iota
+	//OptimizeBitRateEnabled enables the bitrate optimization.
+	OptimizeBitRateEnabled
+)
