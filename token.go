@@ -20,14 +20,15 @@ type GetTokenResponse struct {
 func (g *GetTokenResponse) UnmarshalJSON(b []byte) error {
 	type Alias GetTokenResponse
 	var gt struct {
-		*Alias
+		Alias
 		Expire string `json:"expire"`
 	}
 	err := json.Unmarshal(b, &gt)
 	if err != nil {
 		return err
 	}
-	*g = GetTokenResponse(*gt.Alias)
+
+	*g = GetTokenResponse(gt.Alias)
 	g.Expire, err = time.Parse("2006-01-02T15:04:05", gt.Expire)
 	return err
 }
